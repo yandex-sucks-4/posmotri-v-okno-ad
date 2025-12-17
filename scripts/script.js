@@ -49,7 +49,7 @@ form.onsubmit = (e) => {
   const requestUrl = generateFilterRequest(
     endpoint,
     formData.city,
-    formData.timeArray
+    formData.timeArray,
   );
 
   mainMechanics(requestUrl);
@@ -229,7 +229,7 @@ function chooseCurrentVideo({
         item.classList.add(currentLinkClassName);
         showPreloader(preloaderTmp, videoContainer);
         const vidoObj = videoData.find(
-          (video) => String(video.id) === String(item.id)
+          (video) => String(video.id) === String(item.id),
         );
         setVideo({
           baseUrl,
